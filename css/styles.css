@@ -1,0 +1,206 @@
+:root{
+    --fondo: hsl(226, 43%, 10%);
+    --card:hsl(235, 46%, 20%) ;
+    --card-secondary: hsl(235, 45%, 61%);
+    --orange: hsl(15, 100%, 70%);
+    --sky: hsl(195, 74%, 62%);
+    --green:hsl(145, 58%, 55%);
+    --pink:hsl(348, 100%, 68%);
+    --purple: hsl(264, 64%, 52%);
+    --yellow:hsl(43, 84%, 65%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--fondo);
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: hsl(236, 100%, 87%);
+}
+a:hover{
+    color: white;
+}
+small{
+    color: #aaf;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+main .card-report{
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    border-radius: 10px;
+    grid-column: 1/ span 1;
+    grid-row: 1/ span 2;
+    background-color: var(--card);
+}
+main .card-report figure{
+    background-color: hsl(246, 80%, 60%);
+    padding: 10px 20px;
+    height: auto;
+    border-radius: 10px;
+
+}
+main .card-report figure *{
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+.card-report figure img{
+    width: 50px;
+    border:solid white;
+    border-radius: 50%;
+}
+.card-report a{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.card-report div{
+    display: flex;
+    flex-direction: column;
+}
+
+main .card{
+    width: 200px;
+    border-radius: 13px;
+    box-shadow: 0 0 5px --fondo;
+
+}
+main .card figure{
+    height: 35px;
+    margin: 0 20px;
+    flex-wrap: wrap;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+main .card img{
+    width: 60px;
+    top: -5px;
+    position: relative;
+    z-index: 1;
+    object-fit: contain;
+}
+main .card div{
+    background-color:var(--card);
+    position: relative;
+    z-index: 4;
+    height: 150px;
+    border-radius:10px ;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+main .card .text{
+    margin-left: 10px;
+    background:none;
+}
+main .card .text h3{
+    font-size: 2rem;
+}
+main .card div .title-card{
+    background: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 30px;
+}
+main button{
+    height: 10px;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+main .card div:hover{
+    cursor: pointer;
+    background-color:var(--card-secondary);
+}
+main .card1 {
+    background-color: var(--orange);
+}
+main .card2 {
+    background-color:var(--sky);
+}
+main .card3 {
+    background-color: var(--pink);
+}
+main .card4 {
+    background-color: var(--green);
+}
+main .card5 {
+    background-color: var(--purple);
+}
+main .card6 {
+    background-color: var(--yellow);
+}
+
+@media(max-width:700px){
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    
+    main .card-report{
+        display: flex;
+        width: 90vw;
+        margin-top: 10px;
+    }
+    main .card-report figure{
+        display: flex;
+        height: 100px;
+        align-items: center;
+    }
+    main .card-report figure figcaption{
+        margin: 0;
+        padding: 0;
+    }
+    main .card-report figure figcaption *{
+        margin: 0;
+    }
+    .card-report figure img{
+        margin: 0 10px;
+    }
+    main .card-report div{
+        height: 50px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    main .card{
+        width: 90vw;
+        margin-bottom: 20px;
+    }
+    main .card div{
+        width: 100%;
+    }
+}
