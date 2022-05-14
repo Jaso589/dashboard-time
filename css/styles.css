@@ -196,6 +196,9 @@ main .card6 {
         display: flex;
         justify-content: space-evenly;
     }
+    main .card-report div{
+        flex-direction: row;
+    }
     main .card{
         width: 90vw;
         margin-bottom: 20px;
